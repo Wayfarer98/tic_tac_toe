@@ -10,3 +10,6 @@ def check_win(arr: np.ndarray, symb: str) -> bool:
         if np.all(arr.diagonal() == symb) or np.all(np.fliplr(arr).diagonal() == symb):
             return True
     return False
+
+def check_occupied(arr: np.ndarray, row: int, col: int) -> bool:
+        return arr[row, col] != " "
