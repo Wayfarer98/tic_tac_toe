@@ -27,3 +27,6 @@ class board:
 
     def set_value(self, row: int, col: int, symb: str) -> None:
         self.board[row, col] = symb
+
+    def check_occupied(self, row: int, col: int) -> bool:
+        return self.board[row, col] != " "
