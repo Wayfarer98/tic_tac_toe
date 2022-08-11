@@ -1,4 +1,4 @@
-from check import check_filled, check_win
+from check import check_filled, check_win, check_occupied
 from print_board import print_board
 import numpy as np
 
@@ -24,6 +24,11 @@ def game_loop():
             if choice == "q":
                 print("Quitting")
                 break
+            continue
+
+        if check_occupied(arr, int(row), int(col)):
+            print("\n")
+            print("This square is already occupied, try again.")
             continue
 
         arr[int(row), int(col)] = symb
